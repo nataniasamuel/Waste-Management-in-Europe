@@ -6,7 +6,7 @@ import plotly.express as px
 
 #side bar function with europe as the default
 def sidebar(data):
-    st.sidebar.title("Dashboard Settings")
+    st.sidebar.title("♻️Dashboard Settings")
     countries = sorted(data['Region'].unique().tolist())
     default_idx = countries.index('European Union - 27 countries (from 2020)') if 'European Union - 27 countries (from 2020)' in countries else 0
     country = st.sidebar.selectbox("Select a Country", options=countries, index = default_idx)
