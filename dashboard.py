@@ -23,7 +23,7 @@ def load_data():
 def main():
 # Setting colour theme
     pio.templates["earthy"] = pio.templates["plotly_white"]
-    pio.templates["earthy"].layout.colorway = ["#16588E","#21A06D","#FFB300","#F03AE7", "#90D73D", "#00BCD4", "#FF5722"]
+    pio.templates["earthy"].layout.colorway = ["#1A7BCB","#21A06D","#FFB300","#F03AE7", "#90D73D", "#00BCD4", "#FF5722"]
     pio.templates.default = "earthy"
     
     st.title("Waste Management Analysis Dashboard 🗑️")

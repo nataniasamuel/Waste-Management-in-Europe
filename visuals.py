@@ -5,14 +5,14 @@ import seaborn as sns
 import plotly.express as px
 import plotly.graph_objects as go
 
-colours = {'Recycling': "#21A06D", 'Energy Recovery': '#FFB300', 'Landfill': '#00BCD4'}
+colours = ["#21A06D", "#FFB300", "#0EB3C9"]
 def plot_waste_generated_time(data_filtered):
     fig = px.line(data_filtered, x='Year', y='Waste generated', markers=True, title="Waste Generated Over Time")
     st.plotly_chart(fig, use_container_width=True)
 
 def plot_donut(data_filtered):
     tot = data_filtered[['Recycling', 'Energy Recovery', 'Landfill']].sum()
-    fig = px.pie(values=tot, names=tot.index, hole=0.5, title="Distribution of Waste Treatment Methods",names="category",color = "cartegory",color_discrete_map=colours)
+    fig = px.pie(values=tot, names=tot.index, hole=0.5, title="Distribution of Waste Treatment Methods", color_discrete_map=colours)
     st.plotly_chart(fig)
 
 def plot_map(data,selected_country=None):
@@ -50,7 +50,7 @@ def waste_treatment_time(data_filtered):
         var_name='Method', 
         value_name='Amount')
 
-    fig = px.line(df_melted, x='Year', y='Amount', color='Method', markers=True,title="Waste Treatment Methods Over Time",names="category",color = "cartegory",color_discrete_map=colours)
+    fig = px.line(df_melted, x='Year', y='Amount', color='Method', markers=True,title="Waste Treatment Methods Over Time",color_discrete_map=colours)
     st.plotly_chart(fig, use_container_width=True)
 
 def recycle_rate(data_filtered, data):
