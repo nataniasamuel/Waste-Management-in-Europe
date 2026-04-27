@@ -1,11 +1,5 @@
 # Waste Management Dashboard
 
-## Features
-* **Interactive Maps:** View waste generation per country.
-* **Treatment Analysis:** Compare Recycling, Energy Recovery, and Landfill rates over time.
-* **Comparative Insights:** Compare specific country recycling rates against the EU average.
-* **Time-Series Analysis:** Compare data over time to understand trend and progress.
-
 ## Project Structure
 * `dashboard.py`: The main application entry point.
 * `visuals.py`: Contains all visualisation functions.
